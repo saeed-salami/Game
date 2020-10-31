@@ -10,25 +10,27 @@ public class Car {
         return gear;
     }
 
-    public int upGear(){
-        if (gear<6 && gear>=0) {
-            speed +=40;
+    public int upGear() {
+        if (gear < 6 && gear >= 0) {
+            speed += 40;
             return gear += 1;
-        } else if (gear == 6){
-            return speed+=20;
+        } else if (gear == 6) {
+            return speed += 20;
         }
         return speed;
     }
-    public int downGear(){
-        if (gear>0) {
-            speed -=40;
+
+    public int downGear() {
+        if (gear > 0) {
+            speed -= 40;
             return gear -= 1;
-        } else if (gear == 0){
-            return speed-=20;
+        } else if (gear == 0) {
+            return speed -= 20;
         }
         return speed;
     }
-    public void showStatus(String str){
+
+    public void showStatus(String str) {
         if (str.equals("up")) {
             upGear();
             System.out.println("fast" + gear + "\n" + speed);
